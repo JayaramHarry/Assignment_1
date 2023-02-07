@@ -206,47 +206,23 @@ app.put("/todos/:todoId/", async (request, response) => {
     category = previousTodo.category,
     dueDate = previousTodo.dueDate,
   } = request.body;
-  switch (true) {
+   switch (true) {
     case requestBody.status !== undefined:
-      if (true) {
-        updateColumn = "Status";
-      } else {
-        response.status(400);
-        response.send("Invalid Todo Status");
-      }
+      updateColumn = "Status";
       break;
     case requestBody.priority !== undefined:
-      if (true) {
-        updateColumn = "Priority";
-      } else {
-        response.status(400);
-        response.send("Invalid Todo Priority");
-      }
+      updateColumn = "Priority";
       break;
     case requestBody.todo !== undefined:
-      if (true) {
-        updateColumn = "Todo";
-      } else {
-        response.status(400);
-        response.send("Invalid Todo");
-      }
+      updateColumn = "Todo";
       break;
     case requestBody.category !== undefined:
-      if (true) {
-        updateColumn = "Category";
-      } else {
-        response.status(400);
-        response.send("Invalid Todo Category");
-      }
+      updateColumn = "Category";
       break;
     case requestBody.dueDate !== undefined:
-      if (true) {
-        updateColumn = "Due Date";
-      } else {
-        response.status(400);
-        response.send("Invalid Due Date");
-      }
+      updateColumn = "Due Date";
       break;
+  }
   const updateTodoQuery = `
         UPDATE
         todo
